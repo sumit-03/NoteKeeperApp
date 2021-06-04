@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/NoteKeeperApp/static/js/main.c0506125.chunk.js",
-    "main.js.map": "/NoteKeeperApp/static/js/main.c0506125.chunk.js.map",
+    "main.js": "/NoteKeeperApp/static/js/main.22169e43.chunk.js",
+    "main.js.map": "/NoteKeeperApp/static/js/main.22169e43.chunk.js.map",
     "runtime-main.js": "/NoteKeeperApp/static/js/runtime-main.3cd7a1d2.js",
     "runtime-main.js.map": "/NoteKeeperApp/static/js/runtime-main.3cd7a1d2.js.map",
-    "static/js/2.d5047581.chunk.js": "/NoteKeeperApp/static/js/2.d5047581.chunk.js",
-    "static/js/2.d5047581.chunk.js.map": "/NoteKeeperApp/static/js/2.d5047581.chunk.js.map",
+    "static/js/2.a391ab94.chunk.js": "/NoteKeeperApp/static/js/2.a391ab94.chunk.js",
+    "static/js/2.a391ab94.chunk.js.map": "/NoteKeeperApp/static/js/2.a391ab94.chunk.js.map",
     "index.html": "/NoteKeeperApp/index.html",
-    "precache-manifest.eb5afc9fe62a3135a3dcde2126ddc772.js": "/NoteKeeperApp/precache-manifest.eb5afc9fe62a3135a3dcde2126ddc772.js",
+    "precache-manifest.edec512023b98ff7dc84db6ccf56e2e2.js": "/NoteKeeperApp/precache-manifest.edec512023b98ff7dc84db6ccf56e2e2.js",
     "service-worker.js": "/NoteKeeperApp/service-worker.js"
   },
   "entrypoints": [
     "static/js/runtime-main.3cd7a1d2.js",
-    "static/js/2.d5047581.chunk.js",
-    "static/js/main.c0506125.chunk.js"
+    "static/js/2.a391ab94.chunk.js",
+    "static/js/main.22169e43.chunk.js"
   ]
 }
