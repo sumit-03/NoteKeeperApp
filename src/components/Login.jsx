@@ -14,6 +14,7 @@ function Login() {
         const newLoginCode = event.target.value;
         setLoginCode(newLoginCode);
     }
+
     
     function handleClickEvent (event) {
         if(isVisited) {
@@ -22,14 +23,15 @@ function Login() {
                 setMessage("SucceFully Logged In");
                 setLoginCode("");
                 // take to home screen
-                setInterval(() => {
+                setTimeout(() => {
                     setIsSuccessFullLogin(0);
-                    history.push('/notes');
-                }, 500);
+                    // history = [];
+                    history.push("/notes");
+                }, 1500);
                 
             } else {
                 setIsSuccessFullLogin(2);
-                setMessage("Enter Correct Code");
+                setMessage("Enter Correct Code! TRY AGAIN");
             }
         } else {
             localStorage.code = loginCode;
@@ -38,9 +40,11 @@ function Login() {
             setIsSuccessFullLogin(1);
         }
         setLoginCode("");
-        setInterval(() => {
+        setTimeout(() => {
             setIsSuccessFullLogin(0);
-        }, 2000);
+        }, 2500);
+
+        event.preventDefault();
     }
 
 
@@ -73,7 +77,7 @@ function Login() {
             <p style={errorMessageObj} >{message}</p>
             <input type="number" min="100000000" max="999999999" onChange={handleInputChange} placeholder="Enter 9-digit code" value={loginCode} ></input>
             
-            <LoginButton text={!isVisited ? "SET CODE" : "LOG IN"} href="#" onClick={handleClickEvent}/>
+            <LoginButton text={!isVisited ? "SET CODE" : "GET IN"} href="#" onClick={handleClickEvent}/>
         </div>
     </div> 
     

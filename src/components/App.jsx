@@ -3,11 +3,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
-import { useLocation } from 'react-router-dom';
 
 
 function App() {
-  const location = useLocation();
   const [notes, setNotes] = useState(localStorage.notes);
 
   // console.log(location.state.loggedIn);

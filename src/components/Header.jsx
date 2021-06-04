@@ -7,11 +7,9 @@ import {makeStyles, withStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
 import HighlightIcon from "@material-ui/icons/Highlight";
 import EditIconComponent from "./EditIconComponent";
-import Button from "@material-ui/core/Button";
 import InputBase from '@material-ui/core/InputBase';
-import { Link } from "react-router-dom";
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import Fab from '@material-ui/core/Fab';
+import { Link, useHistory } from "react-router-dom";
+
 
 import LoginButton from "./LoginButton";
 
@@ -91,8 +89,16 @@ const GlobalCss = withStyles({
 
 export default function Header(props) {
   const classes = useStyles();
+  const history = useHistory();
 
   // console.log(props);
+
+  function handleLogOutORLogIn() {
+    history.replace('/login');  
+  }
+
+
+
   function handleSearchInputChange(event) {
     let searchVal = event.target.value;
     searchVal = searchVal.toLowerCase();
@@ -132,7 +138,7 @@ export default function Header(props) {
           {/* edit */}
           {props.isEditCode &&
             
-            <LoginButton text="LOG IN" href={"/"} />
+            <LoginButton text="LOG IN" href="#" onClick={handleLogOutORLogIn} />
             
           }
           
@@ -147,7 +153,7 @@ export default function Header(props) {
           }
           
           {props.isLoggedIn &&
-            <LoginButton text="LOG OUT" href={"/"} />
+            <LoginButton text="LOG OUT" href="#" onClick={handleLogOutORLogIn} />
             
           }
 

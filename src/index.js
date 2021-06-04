@@ -7,19 +7,21 @@ import Login from "./components/Login";
 
 import {
     HashRouter,
-    BrowserRouter as Router,
     Switch,
     Route,
-    useParams
+    Redirect
   } from "react-router-dom";
 
 
 
 // ReactDOM.render(<App />, document.getElementById("root"));
 ReactDOM.render(
-    <HashRouter basename="/NoteKeeperApp">
+    <HashRouter basename="/NoteKeeperApp" >
         <Switch>
-            <Route exact path="/">
+            
+            <Redirect exact from="/" to="/login" />
+            
+            <Route path="/login" >
                 <Login />
             </Route>
 

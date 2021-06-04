@@ -21,7 +21,7 @@ function EditCode(props) {
     }
 
 
-    function handleEditClickEvent() {
+    function handleEditClickEvent(event) {
         const val = localStorage.code;
         if((val !== undefined) && (val.length === 9) && (val === pcode)) {
             localStorage.code = ncode;
@@ -32,9 +32,11 @@ function EditCode(props) {
             setIsEdit(2);
             
         }
-        setInterval(() => {
+        setTimeout(() => {
             setIsEdit(0);
         }, 2500);
+
+        event.preventDefault();
     }
 
     const errorMessageObj = {
