@@ -17,7 +17,7 @@ import {
 
 // ReactDOM.render(<App />, document.getElementById("root"));
 ReactDOM.render(
-    <HashRouter>
+    <HashRouter basename="/NoteKeeperApp">
         <Switch>
             <Route exact path="/">
                 <Login />
