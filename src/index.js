@@ -17,7 +17,7 @@ import {
 
 // ReactDOM.render(<App />, document.getElementById("root"));
 ReactDOM.render(
-    <BrowserRouter basename="">
+    <HashRouter basename="">
         <Switch>
             
             <Route exact path="/">
@@ -37,7 +37,7 @@ ReactDOM.render(
                 <EditCode/>
             </Route>
         </Switch>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById("root")
 );
 
