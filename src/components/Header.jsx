@@ -138,7 +138,7 @@ export default function Header(props) {
           {/* edit */}
           {props.isEditCode &&
             
-            <LoginButton text="LOG IN" href="#" onClick={handleLogOutORLogIn} />
+            <LoginButton text="LOG IN" onClick={handleLogOutORLogIn} />
             
           }
           
@@ -153,7 +153,7 @@ export default function Header(props) {
           }
           
           {props.isLoggedIn &&
-            <LoginButton text="LOG OUT" href="#" onClick={handleLogOutORLogIn} />
+            <LoginButton text="LOG OUT" onClick={handleLogOutORLogIn} />
             
           }
 

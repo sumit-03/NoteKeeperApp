@@ -77,7 +77,7 @@ function Login() {
             <p style={errorMessageObj} >{message}</p>
             <input type="number" min="100000000" max="999999999" onChange={handleInputChange} placeholder="Enter 9-digit code" value={loginCode} ></input>
             
-            <LoginButton text={!isVisited ? "SET CODE" : "GET IN"} href="#" onClick={handleClickEvent}/>
+            <LoginButton text={!isVisited ? "SET CODE" : "GET IN"} onClick={handleClickEvent}/>
         </div>
     </div> 
     

@@ -6,6 +6,7 @@ import Login from "./components/Login";
 
 
 import {
+    BrowserRouter,
     HashRouter,
     Switch,
     Route,
@@ -16,10 +17,13 @@ import {
 
 // ReactDOM.render(<App />, document.getElementById("root"));
 ReactDOM.render(
-    <HashRouter basename="/NoteKeeperApp" >
+    <BrowserRouter basename="">
         <Switch>
             
-            <Redirect exact from="/" to="/login" />
+            <Route exact path="/">
+                <Redirect to="/login" />
+            </Route>
+            {/* <Redirect exact from="/" to="/login" /> */}
             
             <Route path="/login" >
                 <Login />
@@ -33,7 +37,7 @@ ReactDOM.render(
                 <EditCode/>
             </Route>
         </Switch>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 function LoginButton(props) {
     const classes = useStyles();
    
-    return <Button href={props.href}
+    return <Button
             variant="contained"
             color="primary"
             className={classes.loginButton}
