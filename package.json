@@ -1,5 +1,6 @@
 {
   "name": "keeperApp",
+  "homepage": "https://sumit-03.github.io/NoteKeeperApp/",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -7,6 +8,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "gh-pages": "^3.2.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-router-dom": "^5.2.0",
@@ -19,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
