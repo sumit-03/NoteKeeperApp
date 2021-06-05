@@ -6,7 +6,7 @@ import { Zoom } from '@material-ui/core';
 function EditIconComponent() {
     return <div className="edit-icon">
         <Zoom in={true} >
-            <Fab title="Edit Code" >
+            <Fab title="SET NEW CODE" >
               <EditIcon />
             </Fab>
         </Zoom>

@@ -23,7 +23,7 @@ function EditCode(props) {
 
     function handleEditClickEvent(event) {
         const val = localStorage.code;
-        if((val !== undefined) && (val.length === 9) && (val === pcode)) {
+        if((ncode !== undefined) && (ncode.length === 9) && (val === pcode)) {
             localStorage.code = ncode;
             setMessage("SuccessFully Changed the code");
             setIsEdit(1);

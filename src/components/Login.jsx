@@ -17,9 +17,19 @@ function Login() {
 
     
     function handleClickEvent (event) {
-        if(!isVisited && loginCode.length==0) {
+        if(!isVisited) {
             setIsSuccessFullLogin(2);
-            setMessage("Empty Field! TRY AGAIN");
+            if(loginCode.length === 0)
+                setMessage("Empty Field! TRY AGAIN");
+            else if(loginCode.length < 9) {
+                setMessage("Enter 9-digit code! TRY AGAIN");
+            } else {
+                localStorage.code = loginCode;
+                localStorage.isVisited = true;
+                setIsVisited(localStorage.isVisited);
+                setMessage("Hurrey!! TRY LOG IN WITH SAME CODE");
+                setIsSuccessFullLogin(1);
+            }
         }
         else if(isVisited) {
             if(loginCode === localStorage.code) {
@@ -30,23 +40,18 @@ function Login() {
                 setTimeout(() => {
                     setIsSuccessFullLogin(0);
                     // history = [];
-                    history.push("/notes");
+                    history.replace("/notes");
                 }, 1500);
                 
             } else {
                 setIsSuccessFullLogin(2);
                 setMessage("Enter Correct Code! TRY AGAIN");
             }
-        } else {
-            localStorage.code = loginCode;
-            localStorage.isVisited = true;
-            setIsVisited(localStorage.isVisited);
-            setIsSuccessFullLogin(1);
-        }
+        } 
         setLoginCode("");
         setTimeout(() => {
             setIsSuccessFullLogin(0);
-        }, 2500);
+        }, 2000);
 
         event.preventDefault();
     }
