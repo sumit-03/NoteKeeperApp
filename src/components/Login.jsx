@@ -17,7 +17,11 @@ function Login() {
 
     
     function handleClickEvent (event) {
-        if(isVisited) {
+        if(!isVisited && loginCode.length==0) {
+            setIsSuccessFullLogin(2);
+            setMessage("Empty Field! TRY AGAIN");
+        }
+        else if(isVisited) {
             if(loginCode === localStorage.code) {
                 setIsSuccessFullLogin(1);
                 setMessage("SucceFully Logged In");
